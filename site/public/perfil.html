@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./js/funcoes.js">
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="icon" type="imagem/png" href="./assets/logo-individual.png">
+    <title>Perfil</title>
+</head>
+<body>
+    <div class="janela">
+        <div class="header-left">
+            <h1>Valorant Omega</h1>
+
+            <img src="./assets/perfil01.png" class="userimg">
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+    
+            <div class="btn-nav-white">
+                <img src="" class="img">
+                <a href="./dashboord/dashboord.html">
+                    <h3>Grafico</h3>
+                </a>
+            </div>
+        
+            <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/">Baixar</a></button>
+
+            <div class="btn-nav-white">
+                <img src="" class="img">
+                <a href="">
+                    <h3>Sair</h3>
+                </a>
+            </div>
+
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <img src="./assets/sair.png" alt="">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;  
+</script>

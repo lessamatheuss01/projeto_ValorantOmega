@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #FE4553;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #FE4553;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    height: 20vh;
+    background: #101823;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* padding: 5px; */
+}
+
+.navbar{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;    
+}
+.navbar ul li{
+    justify-content: space-around;
+    padding: 5px;
+    list-style: none;
+    width: 55px;
+    justify-content: center;
+    text-align: center;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FE4553;
+}
+.navbar button{
+    display: flex;
+    align-items: center;
+    height: 30%;
+    width: 25%;
+    padding: 5px 30px 5px 30px;
+    border-radius: 1px;
+    border-color: #FE4553;
+    color: #FE4553;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+}
+
+.navbar button a{
+    color: #FE4553;
+}
+
+/* BANNER */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner h3{
+    width: 100%;
+    height: 2vh;
+    line-height: 75px;
+    font-size: 50px;
+    color: #101823;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.caixas{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.caixa{
+    width: 30vw;
+    height: 70vh;
+    background-color: #101823;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.caixa h2{
+    color: #FE4553;
+    text-align: center;
+    font-size: 20px;
+}
+
+.caixa .img1{
+    background-image: url(../assets/Mapas/Pearl.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img2{
+    background-image: url(../assets/Mapas/Fracture.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img3{
+    background-image: url(../assets/Mapas/Breeze.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa p{
+    color:#FE4553;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.caixa:hover{
+    transform: scale(1.1);
+}
+
+/* SOCIAL */
+
+.boxs{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.box{
+    width: 30vw;
+    height: 70vh;
+    background-color: #101823;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.box3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: -5px;
+    margin-top: 100px;
+}
+
+.box3 .img7{
+    background-image: url(../assets/Mapas/Split.jpeg);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box3 .img8{
+    background-image: url(../assets/Mapas/Ascent.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box h2{
+    color: #FE4553;
+    text-align: center;
+    font-size: 20px;
+}
+
+.box .img4{
+    background-image: url(../assets/Mapas/Icebox.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box .img5{
+    background-image: url(../assets/Mapas/Bind.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box .img6{
+    background-image: url(../assets/Mapas/Haven.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box1 .img7{
+    background-image: url(../assets/Mapas/Split.jpeg);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box1 .img8{
+    background-image: url(../assets/Mapas/Ascent.png);
+    width: 25vw;
+    height: 30vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box p{
+    color: #FE4553;
+    text-align: center;
+    font-size: 20px;
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+

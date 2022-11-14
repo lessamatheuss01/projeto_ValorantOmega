@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #FE4553;
+}
+/* HEADER */
+.header{
+    width: 100%;
+    height: 20vh;
+    background: #101823;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container {
+    width: 10vw;
+    background-size: cover;
+    height: 100%;
+    /* padding: 5px; */
+}
+
+.navbar{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;    
+}
+.navbar ul li{
+    justify-content: space-around;
+    padding: 5px;
+    list-style: none;
+    width: 55px;
+    justify-content: center;
+    text-align: center;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FE4553;
+}
+.navbar button{
+    display: flex;
+    align-items: center;
+    height: 30%;
+    width: 25%;
+    padding: 5px 30px 5px 30px;
+    border-radius: 1px;
+    border-color: #FE4553;
+    color: #FE4553;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+}
+.navbar button a{
+    color: #FE4553;
+}
+
+/* BANNER */
+
+.cadastro{
+    height: 520px;
+    width: 70%;
+    padding-bottom: 25px;
+}
+
+.form{
+    margin: 8%;
+    color: #FE4553;
+}
+
+.form{
+    box-sizing: border-box;
+    position: absolute;
+    width: 695px;
+    height: 544px;
+    left: 17px;
+    margin-top: 19px;
+    background: #101823;
+    backdrop-filter: blur(2px);
+}
+
+.form button{
+    height: 8%;
+    width: 19%;
+    padding: 10px;
+    border: 2px solid;
+    color: #FE4553;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+
+
+
+.campo{
+    font-size: 15px;
+    justify-content: flex-start;
+    margin: 3%;
+}
+
+.campo input{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid #FE4553;
+    height: 5%;
+    width: 45%;
+    padding: 2px;
+    color: white;
+}
+
+.personagem label{
+    font-size: 15px;
+    justify-content: flex-start;
+    margin: 8%;
+}
+
+.personagem {
+    margin-left: 5%;
+    height: 5%;
+    width: 45%;
+    padding: 2px;
+}
+
+.map{
+    margin-left: 5%;
+    height: 5%;
+    width: 45%;
+    padding: 2px;
+}
+
+.map label{
+    font-size: 15px;
+    justify-content: flex-start;
+    margin: 10%;
+}
+
+.info{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 35%;
+    color: #FE4553;
+    font-size: 18px;
+    width: 35%;
+    margin-top: -10px;
+}
+
+.info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.imagem{
+    position: absolute;
+    z-index: 1;
+    left: -450px;
+    margin-left: 78%;
+    margin-top: -20px;
+    height: 50vh;
+}

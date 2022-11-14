@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #FE4553;
+}
+/* HEADER */
+.header{
+    width: 100%;
+    height: 20vh;
+    background: #101823;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container {
+    width: 10vw;
+    background-size: cover;
+    height: 100%;
+    /* padding: 5px; */
+}
+
+.navbar{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;    
+}
+.navbar ul li{
+    justify-content: space-around;
+    padding: 5px;
+    list-style: none;
+    width: 55px;
+    justify-content: center;
+    text-align: center;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #FE4553;
+}
+
+/* BANNER */
+
+.cadastro{
+    height: 520px;
+    width: 70%;
+    padding-bottom: 25px;
+    
+}
+
+.form{
+    margin: 8%;
+    color: #FE4553;
+}
+
+.form{
+    box-sizing: border-box;
+    position: absolute;
+    width: 695px;
+    height: 520px;
+    left: 17px;
+    margin-top: 19px;
+    background: #101823;
+    backdrop-filter: blur(2px);
+}
+
+.form button{
+    height: 8%;
+    width: 15%;
+    padding: 10px;
+    border: 2px solid;
+    color: #FE4553;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 45%;
+}
+
+.campo{
+    font-size: 15px;
+    justify-content: flex-start;
+    margin: 3%;
+}
+
+.campo input{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid #FE4553;
+    height: 5%;
+    width: 45%;
+    padding: 6px;
+    color: white;
+}
+
+.imagem{
+    margin-left: 78%;
+    margin-top: 15px;
+    height: 50vh;
+}

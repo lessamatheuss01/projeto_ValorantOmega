@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="./assets/logo-individual.png">
+    <link rel="stylesheet" href="./js/funcoes.js">
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="container">
+            <img src="./assets/logo-individual.png" width="100px" alt="">
+        </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#social">Valorant</a></li>
+                    <li><a href="#noticia">Noticias</a></li>
+                    <li><a href="mapa.html">Mapas</a></li>
+                    <li><a href="agente.html">Agentes</a></li>
+                 </ul>
+                    <button class="button"><a href="login.html">Login</a></button>
+            </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="cadastro">
+            <div class="form">
+                <div class="campo">
+                    <h4>Nome:</h4>
+                    <input type="text" id="nome_input" placeholder="Nome">
+                </div>
+                <div class="campo">
+                    <h4>Sobrenome:</h4>
+                    <input type="text" id="sobrenome_input" placeholder="Sobrenome:">
+                </div>
+                <div class="campo">
+                    <h4>E-mail:</h4>
+                    <input type="email" id="email_input" placeholder="Email:">
+                </div>
+                <div class="campo">
+                    <h4>Senha:</h4>
+                    <input type="password" id="senha_input" placeholder="Password">
+                </div>
+                <div class="campo">
+                    <h4>Confirmação de senha</h4>
+                    <input type="password" id="confirmacao_senha_input" placeholder="Password">
+                </div>
+
+                <div class="personagem">
+                    <label>Agentes</label>
+                    <select name="agentes" id="sel_agentes">
+                        <option value="">--Escolhe--</option>
+                        <option value="01">Fade</option>
+                        <option value="02">Neon</option>
+                        <option value="03">Chamber</option>
+                        <option value="04">Kay/o</option>
+                        <option value="05">Astra</option>
+                        <option value="06">Yoru</option>
+                        <option value="07">Skye</option>
+                        <option value="08">Breach</option>
+                        <option value="09">Raze</option>
+                        <option value="10">Reyna</option>
+                        <option value="11">Jett</option>
+                        <option value="12">Phoenix</option>
+                        <option value="13">Harbor</option>
+                        <option value="14">Sage</option>
+                        <option value="15">Sova</option>
+                        <option value="16">Cypher</option>
+                        <option value="17">Killjoy</option>
+                        <option value="18">Omen</option>
+                        <option value="19">Viper</option>
+                        <option value="10">Brimstone</option>
+                    </select>
+                </div>
+
+                <div class="map">
+                    <label>Mapas</label>
+                    <select name="mapa" id="sel_maps">
+                        <option value="">--Escolhe--</option>
+                        <option value="1">Ascent</option>
+                        <option value="2">Bind</option>
+                        <option value="3">Breeze</option>
+                        <option value="4">Fracture</option>
+                        <option value="5">Haven</option>
+                        <option value="6">Icebox</option>
+                        <option value="7">Pearl</option>
+                        <option value="8">Split</option>
+
+                    </select>
+                </div>
+
+                <button onclick="cadastrar()"><a href="login.html">Cadastrar</a></button>
+                
+                <!-- <div class="info">
+                    <h4>Esqueceu a senha?</h4>
+                </div> -->
+            </div>
+            <div class="imagem">
+                <img src="./assets/aba_cadastro.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var sobrenomeVar = sobrenome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            // cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                confimacaosenhaServer: confirmacaoSenhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                // cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
+    }
+
+</script>
