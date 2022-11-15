@@ -60,16 +60,16 @@ a{
 }
 
 .form{
-    margin: 8%;
+    margin: 10%;
     color: #FE4553;
 }
 
 .form{
     box-sizing: border-box;
     position: absolute;
-    width: 695px;
-    height: 520px;
-    left: 17px;
+    width: 630px;
+    height: 410px;
+    left: 20px;
     margin-top: 19px;
     background: #101823;
     backdrop-filter: blur(2px);
@@ -77,14 +77,15 @@ a{
 
 .form button{
     height: 8%;
-    width: 15%;
-    padding: 10px;
+    width: 19%;
+    padding: 5px;
     border: 2px solid;
     color: #FE4553;
     background-color: transparent;
     background-repeat: no-repeat;
     position: absolute;
-    margin-left: 45%;
+    margin-left: 90px;
+    margin-top: 15px;
 }
 
 .campo{
@@ -105,7 +106,24 @@ a{
 }
 
 .imagem{
+    position: absolute;
+    z-index: 1;
+    left: -543px;
     margin-left: 78%;
-    margin-top: 15px;
+    margin-top: -35px;
     height: 50vh;
+}
+
+.footer{
+    margin: 0;
+    padding: 0;
+    background-color: #101823;
+}
+
+.footer container{
+    justify-content: center;
+}
+
+.footer p{
+    color: #FE4553;
 }

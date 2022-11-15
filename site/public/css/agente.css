@@ -72,3 +72,17 @@ a{
     background-image: url(../assets/VALORANTcypher.jpg);
     background-size: cover;
 }
+
+.footer{
+    margin: 0;
+    padding: 0;
+    background-color: #101823;
+}
+
+.footer container{
+    justify-content: center;
+}
+
+.footer p{
+    color: #FE4553;
+}
