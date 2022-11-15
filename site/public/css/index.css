@@ -180,13 +180,13 @@ a{
 /* NOTICIA */
 .social h3{
     width: 50vw;
-    height: 15vh;
+    /* height: 15vh; */
     font-size: 50px;
     color: #101823;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 
 }
 
@@ -240,6 +240,7 @@ a{
 }
 
 .footer{
+    margin-top: 85px;
     height: 200px;
     background-color: #101823;
 }
