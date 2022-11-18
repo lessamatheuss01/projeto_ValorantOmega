@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="./assets/logo-individual.png">
+    <link rel="icon" type="imagem/png" href="./assets/logo-valorantomega.png">
     <link rel="stylesheet" href="./js/funcoes.js">
     <script src="./js/funcoes.js"></script>
     <link rel="stylesheet" href="./css/login.css">
@@ -14,7 +14,7 @@
         <!-- HEADER -->
         <div class="header">
             <div class="container">
-                <img src="./assets/logo-individual.png" width="100px" alt="">
+                <img src="./assets/logo-valorantomega.png" width="100px" alt="">
             </div>
                 <div class="navbar">
                     <ul>
@@ -39,7 +39,7 @@
                         <h4>Senha:</h4>
                         <input type="password" id="senha_input" placeholder="Password:">
                     </div>
-                    <button onclick="entrar()"><a href="./dashboard/perfil.html">Logar</a></button>
+                    <button onclick="entrar()"><a href="./perfil.html">Logar</a></button>
                 </div>
                 <div class="imagem">
                     <img src="./assets/img_cadastro.png" alt="">
@@ -49,9 +49,7 @@
 
         <!-- FOOTER -->
         <div class="footer">
-            <div class="container">
-              <p>Desenvolvido pelo melhor SPTecher - &copy; Copyright</p>
-            </div>
+            <p>Desenvolvido pelo melhor SPTecher - &copy; Copyright</p>
         </div>
 </body>
 </html>
@@ -101,7 +99,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
