@@ -9,16 +9,22 @@ a{
     color: #FE4553;
 }
 
-
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+::-webkit-scrollbar{
+    width: 10px;
 }
 
-a{
-    text-decoration: none;
-    color: #FE4553;
+::-webkit-scrollbar-track-piece{
+    background-color: #101823;
+    border-left: 1px solid #FE4553;
+}
+
+::-webkit-scrollbar-thumb:vertical{
+    background-color: #FE4553;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover{
+    background-color: white;
 }
 
 /* HEADER */
@@ -267,18 +273,16 @@ a{
 }
 
 .box:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
 .footer{
-    margin: 0;
-    padding: 0;
-    background-color: #101823;
-}
-
-.footer container{
-    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    background: #101823;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer p{

@@ -8,6 +8,26 @@ a{
     text-decoration: none;
     color: #FE4553;
 }
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: #101823;
+    border-left: 1px solid #FE4553;
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal{
+    background-color: #FE4553;
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover{
+    background-color: white;
+}
+
 /* HEADER */
 .header{
     width: 100%;
@@ -82,7 +102,7 @@ a{
     box-sizing: border-box;
     position: absolute;
     width: 695px;
-    height: 544px;
+    height: 500px;
     left: 17px;
     margin-top: 19px;
     background: #101823;
@@ -134,19 +154,6 @@ a{
     padding: 2px;
 }
 
-.map{
-    margin-left: 5%;
-    height: 5%;
-    width: 45%;
-    padding: 2px;
-}
-
-.map label{
-    font-size: 15px;
-    justify-content: flex-start;
-    margin: 10%;
-}
-
 .info{
     display: flex;
     justify-content: flex-end;
@@ -175,13 +182,11 @@ a{
 
 
 .footer{
-    margin: 0;
-    padding: 0;
-    background-color: #101823;
-}
-
-.footer container{
-    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    background: #101823;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer p{
