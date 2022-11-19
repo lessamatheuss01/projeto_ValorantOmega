@@ -15,7 +15,21 @@ idusuario int primary key auto_increment,
 nome varchar(45),
 sobrenome varchar(45),
 email varchar(45), constraint chkemail check (email like '%@%'),
-senha varchar(45)
+senha varchar(45),
+fkagente int,
+foreign key (fkagente) references agente(idagente)
+);
+
+create table agente (
+idagente int primary key auto_increment,
+nome varchar(45),
+fkhistoria int,
+foreign key (fkhistoria) references historia(idhistoria)
+);
+
+create table historia(
+idhistoria int primary key auto_increment,
+historiaagente varchar(45)
 );
 
 CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
