@@ -56,7 +56,7 @@
 
                 <div class="personagem">
                     <label>Agentes</label>
-                    <select name="agentes" id="sel_agentes">
+                    <select name="agentes" id="sel_agente">
                         <option value="">--Escolhe--</option>
                         <option value="01">Fade</option>
                         <option value="02">Neon</option>
@@ -77,7 +77,7 @@
                         <option value="17">Killjoy</option>
                         <option value="18">Omen</option>
                         <option value="19">Viper</option>
-                        <option value="10">Brimstone</option>
+                        <option value="20">Brimstone</option>
                     </select>
                 </div>
 
@@ -95,8 +95,11 @@
 
     <!-- FOOTER -->
     <div class="footer">
+        <div class="logo">
+            <img src="./assets/logo-valorantomega.png" width="100px" alt="">
+        </div>
         <p>Desenvolvido pelo melhor SPTecher - &copy; Copyright</p>
-    </div>
+</div>
 </body>
 </html>
 <script>
@@ -110,8 +113,9 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var agenteVar = sel_agente.value;
 
-        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || agenteVar == "") {
             // cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -135,7 +139,8 @@
                 sobrenomeServer: sobrenomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
-                confimacaosenhaServer: confirmacaoSenhaVar
+                confimacaosenhaServer: confirmacaoSenhaVar,
+                agenteServer: agenteVar,
             })
         }).then(function (resposta) {
 
