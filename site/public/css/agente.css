@@ -92,6 +92,8 @@ a{
     background-image: url(../assets/VALORANTcypher.jpg);
     background-size: cover;
 }
+
+
 .sobre{
     height: 100vh;
     display: flex;
@@ -127,10 +129,290 @@ a{
     font-size: 31px;
     /* font-weight: 400; */
     line-height: 41px;
-
+    
     color: #FE4553;
     text-align: center;
     margin-bottom: 100px;
+}
+
+/* SOCIAL */
+
+.caixas{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.caixa{
+    width: 19vw;
+    height: 39vh;
+    background-color: #101823;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.caixa h2{
+    color: #FE4553;
+    text-align: center;
+    font-size: 20px;
+}
+
+.caixa .img1{
+    background-image: url(../assets/viper.jpg);
+    width: 17vw;
+    height: 28vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img2{
+    background-image: url(../assets/jett.jpg);
+    width: 17vw;
+    height: 28vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img3{
+    background-image: url(../assets/sage.jpg);
+    width: 17vw;
+    height: 28vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img4{
+    background-image: url(../assets/raze.jpg);
+    width: 17vw;
+    height: 28vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.caixa .img5{
+    background-image: url(../assets/FADE.jpg);
+    width: 17vw;
+    height: 28vh;
+    background-size: 30vw;
+    background-position: 40%;
+    border-radius: 10px;
+}
+/* PARTE 2 */
+.box2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: -5px;
+    margin-top: 5px;
+}
+
+.box{
+    width: 19vw;
+    height: 39vh;
+    background-color: #101823;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px; 
+}
+
+.box h2{
+    color: #FE4553;
+    text-align: center;
+    font-size: 20px;
+}
+
+.box .img6{
+    background-image: url(../assets/astra.jpg);
+    width: 18vw;
+    height: 27vh;
+    background-size: 30vw;
+    background-position: 30%;
+    border-radius: 10px;
+}
+
+.box .img7{
+    background-image: url(../assets/breach.jpg);
+    width: 18vw;
+    height: 27vh;
+    background-size: 30vw;
+    /* background-position: 30%; */
+    border-radius: 10px;
+}
+
+.box .img8{
+    background-image: url(../assets/skye.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img9{
+    background-image: url(../assets/chamber.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img10{
+    background-image: url(../assets/killjoy.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+/* PARTE 3 */
+.box3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: -5px;
+    margin-top: 9px;
+}
+
+.box{
+    width: 19vw;
+    height: 39vh;
+    background-color: #101823;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px; 
+}
+
+.box .img11{
+    background-image: url(../assets/brimstone.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img12{
+    background-image: url(../assets/reyna.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img13{
+    background-image: url(../assets/omen.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img14{
+    background-image: url(../assets/neon.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img15{
+    background-image: url(../assets/phoenix.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+/* PARTE 4 */
+.box4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: -5px;
+    margin-top: 9px;
+}
+
+.box{
+    width: 19vw;
+    height: 39vh;
+    background-color: #101823;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px; 
+}
+
+.box .img16{
+    background-image: url(../assets/harbor.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img17{
+    background-image: url(../assets/kayo.png);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img18{
+    background-image: url(../assets/sova.jpg);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
+}
+
+.box .img19{
+    background-image: url(../assets/yuro.png);
+    width: 18vw;
+    height: 29vh;
+    background-size: 30vw;
+    background-position: 40%;
+    background-clip: content-box;
+    border-radius: 10px;
 }
 
 
@@ -141,6 +423,7 @@ a{
     background: #101823;
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .footer p{
