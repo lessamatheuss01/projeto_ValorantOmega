@@ -66,7 +66,7 @@ function cadastrar(req, res) {
     var sobrenome = req.body.sobrenomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var agente = req.body.agenteServer
+    var fkagente = req.body.fkagenteServer
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -77,10 +77,12 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
+    }else if(fkagente == undefined) {
+        res.status(400).send("Seu agente está undefined!")
     }else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha, agente)
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, fkagente)
             .then(
                 function (resultado) {
                     res.json(resultado);
