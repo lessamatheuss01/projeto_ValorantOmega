@@ -2,7 +2,7 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     
 }
 
@@ -107,13 +107,37 @@ body{
     background-repeat: no-repeat;
 }
 
+.grafico .box{
+    display: flex;
+    width: 450px;
+    height: 350px;
+    margin-left: 25px;
+    margin-block-start: -8%;
+}
+
+/* .grafico h3{
+    color: #FE4553;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+} */
 
 .grafico{
+    width: 80vw;
+    height: 95vh;
+    background-color: #101823;
+    border-radius: 20px;
     display: flex;
-    height: 500vh;
-    width: 550px;
-    margin-left: 35%;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: 19%;
 }
+
+
 
 /* .caixa{
     width: 30vw;
