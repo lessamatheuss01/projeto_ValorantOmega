@@ -16,7 +16,6 @@
 
 <div class="janela">
     <div class="header-left">
-        <h1>Valorant Omega</h1>
 
         <img src="./assets/perfil01.png" class="userimg">
 
@@ -40,13 +39,15 @@
         <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/" target="_blank" rel="noopener noreferrer">Baixar</a></button>
 
         <div class="btn-logout" onclick="limparSessao()">
-            <img src="./assets/sair.png" alt="">
+            <img src="./assets/sair.png" class="logout">
             
         </div>
     </div>
 </div>
     <div class="grafico">
-        <canvas id="myChart"></canvas>
+        <div class="caixa">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
 </html>
 <script>
@@ -90,12 +91,12 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: labels,
+                label: "Agentes",
                 data: [],
                 fill: false,
-                backgroundColor:'rgb(0, 0, 0)' ,
-                borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
+                backgroundColor:'rgb(454, 0, 0)' ,
+                borderColor: 'rgb(345, 0, 08)',
+                tension: 0.2
             }]
         };
         
