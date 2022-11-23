@@ -1,5 +1,5 @@
 body{
-    background-color: #1018239e;
+    background-color: white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@ body{
 .janela {
     display: flex;
     margin-left: 4%;
-    width: 100vw;
+    width: auto;
 }
 
 .header-left a {
@@ -105,4 +105,32 @@ body{
     color: #FE4553;
     background-color: transparent;
     background-repeat: no-repeat;
+}
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.caixa {
+    margin-top: 25px;
+    margin-left: 235px;
+    width: 35vw;
+    height: 80vh;
+    background-color: #101823;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* margin-top: 100px; */
+}
+
+.caixa h2{
+    color: #FE4553;
+    text-align: center;
+    font-size: 30px;
 }

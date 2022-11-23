@@ -67,11 +67,12 @@
 
         if (emailVar == "" || senhaVar == "") {
             // cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert("Mensagem de erro para todos os campos em branco");
             // finalizarAguardar();
             return false;
         }
         else {
+            alert("Feito o login")
             setInterval(sumirMensagem, 5000)
         }
 
@@ -99,7 +100,7 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idusuario;
 
                     setTimeout(function () {
                         window.location = "./dashboard.html";
