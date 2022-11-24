@@ -8,7 +8,7 @@ body{
 .janela {
     display: flex;
     margin-left: 4%;
-    width: 100vw;
+    width: auto;
 }
 
 .header-left a {
@@ -103,4 +103,97 @@ body{
     color: #FE4553;
     background-color: transparent;
     background-repeat: no-repeat;
+}
+
+.guia{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+    /* justify-content: space-around; */
+}
+
+.img1{
+    background-image: url(../assets/passo1.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img2{
+    background-image: url(../assets/passo2.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img3{
+    background-image: url(../assets/passo3.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img4{
+    background-image: url(../assets/passo4.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img5{
+    background-image: url(../assets/passo5.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img6{
+    background-image: url(../assets/passo6.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
+}
+
+.img7{
+    background-image: url(../assets/passo7.jpg);
+    width: 55vw;
+    height: 57vh;
+    background-size: 55vw;
+    background-position: 50%;
+    align-items: center;
+    margin-left: 50%;
+    margin-block-start: 20px;
+    border-radius: 10px;
 }
