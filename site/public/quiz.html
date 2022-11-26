@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./js/funcoes.js">
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="icon" type="imagem/png" href="./assets/logo-valorantomega.png">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="janela">
+        <div class="header-left">
+
+            <img src="./assets/perfil01.png" class="userimg">
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+    
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Grafico</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./perfil.html">
+                    <h3>Perfil</h3>
+                </a>
+            </div>
+        
+            <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/" target="_blank" rel="noopener noreferrer">Baixar</a></button>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <img src="./assets/sair.png" class="logout">
+            </div>
+        </div>
+
+            <div class="caixa">
+                <h2>Quiz de guia
+                    de iniciantes
+                </h2>
+                <label>Em uma partida o heroísmo é esencial ?</label>
+                <input type="text" id="in_resposta1" placeholder="Sua resposta">
+                <label>Qual a diferença entre atacantes e defensores ?</label>
+                <input type="text" id="in_resposta2" placeholder="Sua resposta">
+                <label>Quais são os quatro passos é esencial no mapa ?</label>
+                <input type="text" id="in_resposta3" placeholder="Sua resposta">
+                <label>Quais funções essencial em batalha ?</label>
+                <input type="text" id="in_resposta4" placeholder="Sua resposta">
+                <label>Qual é o ciclo tatico após um tiroteio ?</label>
+                <input type="text" id="in_resposta5" placeholder="Sua resposta">
+                <br>
+                <br>
+                <button onclick="salvar()">Salvar</button>
+                <button onclick="verificar()">Verificar</button>
+                <div id="div_mensagem"></div>
+            </div>
+            
+            <div class="resposta">
+                <h2>Respostas Certas do Quiz</h2>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var resultados = []
+
+    function salvar(){
+        var resposta1 = in_resposta1.value
+        var resposta2 = in_resposta2.value
+        var resposta3 = in_resposta3.value
+        var resposta4 = in_resposta4.value
+        var resposta5 = in_resposta5.value
+
+        div_mensagem.innerHTML += `${resposta1}<br> ${resposta2}<br> ${resposta3}<br>
+        ${resposta4}<br> ${resposta5}`
+
+    }
+</script>

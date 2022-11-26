@@ -144,7 +144,7 @@ a{
 }
 
 .socio h3{
-    margin-block-start: -40%;
+    margin-block-start: -50%;
     justify-content: flex-start;
     display: flex;
     margin-right: 60%;
@@ -154,6 +154,7 @@ a{
 }
 
 .socio p{
+    margin-block-start: -10px;
     display: flex;
     margin-right: 60%;
     line-height: 80px;
@@ -161,7 +162,7 @@ a{
     /* font-weight: 400; */
     line-height: 41px;
     
-    color: #101823;
+    color: white;
     text-align: center;
     margin-bottom: 100px;
 

@@ -119,6 +119,16 @@ a{
 }
 
 /* SOBRE O JOGO */
+
+iframe{
+    display: flex;
+    width: 655px;
+    height: 455px;
+    align-items: center;
+    /* margin-left: 110px; */
+    margin-top: 15px;
+}
+
 .histo{
     display: flex;
     align-items: center;
@@ -227,7 +237,7 @@ a{
 .caixa .img1 {
     background-image: url(../assets/noticia01.jpg);
     width: 22vw;
-    height: 30vh;
+    height: 35vh;
     background-size: 30vw;
     background-position: 30%;
     border-radius: 10px;
@@ -236,7 +246,7 @@ a{
 .caixa .img2 {
     background-image: url(../assets/noticia02.jpg);
     width: 22vw;
-    height: 30vh;
+    height: 35vh;
     background-size: 30vw;
     background-position: 30%;
     border-radius: 10px;
@@ -245,7 +255,7 @@ a{
 .caixa .img3 {
     background-image: url(../assets/noticia04.jpg);
     width: 22vw;
-    height: 30vh;
+    height: 35vh;
     background-size: 30vw;
     background-position: 30%;
     border-radius: 10px;

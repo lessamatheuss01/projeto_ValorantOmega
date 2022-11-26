@@ -19,6 +19,14 @@
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
+
+            <div class="btn-nav-white">
+                <a href="./quiz.html">
+                    <h3>Quiz</h3>
+                </a>
+            </div>
+
+
     
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
@@ -26,34 +34,60 @@
                 </a>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Avaliações</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./guia.html">
-                    <h3>Guia para iniciantes</h3>
-                </a>
-            </div>
         
             <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/" target="_blank" rel="noopener noreferrer">Baixar</a></button>
 
             <div class="btn-logout" onclick="limparSessao()">
                 <img src="./assets/sair.png" class="logout">
+                
             </div>
         </div>
-
-            <div class="caixa">
-                <h2>Quiz do guia
-                    de iniciantes
-                </h2>
-
-            </div>
     </div>
+
+    <div class="guia">
+        
+        <div class="passo1">
+            <div class="img1"></div>
+        </div>
+
+        
+        <div class="passo2">
+            <div class="img2"></div>
+        </div>
+
+        
+        <div class="passo3">
+            <div class="img3"></div>
+        </div>
+
+        
+        <div class="passo4">
+            <div class="img4"></div>
+        </div>
+        
+
+        <div class="passo5">
+            <div class="img5"></div>
+        </div>
+
+        
+        <div class="passo6">
+            <div class="img6"></div>
+        </div>
+
+        
+        <div class="passo7">
+            <div class="img7"></div>
+        </div>
+    </div>
+
+
+    <!-- <div class=""></div> -->
 </body>
 </html>
+
 <script>
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
 </script>
