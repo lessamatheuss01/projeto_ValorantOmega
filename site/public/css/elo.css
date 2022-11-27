@@ -2,15 +2,13 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    
+    box-sizing: border-box;
 }
-
 
 .janela {
     display: flex;
     margin-left: 4%;
-    width: 100vw;
+    width: auto;
 }
 
 .header-left a {
@@ -105,35 +103,4 @@ body{
     color: #FE4553;
     background-color: transparent;
     background-repeat: no-repeat;
-}
-
-.grafico .box{
-    display: flex;
-    width: 450px;
-    height: 350px;
-    margin-left: 25px;
-    margin-block-start: -8%;
-}
-
-.grafico h3{
-    color: #FE4553;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-top: -155px;
-    font-size: 25px;
-}
-
-.grafico{
-    width: 80vw;
-    height: 95vh;
-    background-color: #101823;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 25px;
-    margin-left: 19%;
 }

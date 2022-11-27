@@ -81,7 +81,7 @@
                     </select>
                 </div>
 
-                <button onclick="cadastrar()"><a href="login.html">Cadastrar</a></button>
+                <button onclick="cadastrar()">Cadastrar</button>
                 
                 <!-- <div class="info">
                     <h4>Esqueceu a senha?</h4>
@@ -115,17 +115,18 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var fkagenteVar = sel_agente.value;
 
+        
         if (nomeVar == "" || sobrenomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || fkagenteVar == "") {
             // cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+            
             // finalizarAguardar();
             return false;
         }
         else {
             setInterval(sumirMensagem, 5000)
         }
-
+        
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -142,6 +143,7 @@
                 confimacaosenhaServer: confirmacaoSenhaVar,
                 fkagenteServer: fkagenteVar,
             })
+
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);

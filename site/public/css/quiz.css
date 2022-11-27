@@ -116,37 +116,66 @@ body{
 
 
 .caixa {
-    margin-top: 25px;
-    margin-left: 225px;
+    margin-top: 45px;
+    margin-left: 245px;
     width: 37vw;
-    height: 78vh;
+    height: 80vh;
     background-color: #101823;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
-    /* margin-top: 100px; */
+}
+
+
+.caixa input{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid #FE4553;
+    height: 5%;
+    width: 45%;
+    padding: 1px;
+    color: white;
 }
 
 .caixa button{
     display: flex;
     align-items: center;
-    height: 10vh;
-    width: 20%;
+    height: 5vh;
+    width: 16%;
     padding: 5px 30px 5px 30px;
     border-radius: 4px;
     border-color: #FE4553;
     color: #FE4553;
     background-color: Transparent;
     background-repeat:no-repeat;
-    margin: 0 15px
+    margin: 0 15px;
+    /* flex-direction: row; */
 }
 
 .caixa h2{
     color: #FE4553;
     text-align: center;
     font-size: 30px;
+}
+
+.pergunta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.mensagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 15px;
 }
 
 label{
@@ -156,17 +185,15 @@ label{
 }
 
 .resposta{
-    margin-top: 25px;
+    margin-top: 45px;
     margin-left: 25px;
     width: 37vw;
-    height: 78vh;
+    height: 80vh;
     background-color: #101823;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
-    /* margin-top: 100px; */
 }
 
 .resposta h2{
@@ -174,3 +201,4 @@ label{
     text-align: center;
     font-size: 30px;
 }
+

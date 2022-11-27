@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./js/funcoes.js">
     <script src="./js/funcoes.js"></script>
-    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/elo.css">
     <link rel="icon" type="imagem/png" href="./assets/logo-valorantomega.png">
-    <title>Perfil</title>
+    <title>Descubra seu elo</title>
 </head>
 <body>
     <div class="janela">
@@ -21,22 +21,23 @@
             </div>
 
             <div class="btn-nav-white">
+                <a href="./perfil.html">
+                    <h3>Perfil</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
                 <a href="./quiz.html">
                     <h3>Quiz</h3>
                 </a>
             </div>
-            
+    
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
                     <h3>Grafico</h3>
                 </a>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./elo.html">
-                    <h3>Descubra seu elo</h3>
-                </a>
-            </div>
         
             <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/" target="_blank" rel="noopener noreferrer">Baixar</a></button>
 
@@ -46,51 +47,8 @@
             </div>
         </div>
     </div>
-
-    <div class="guia">
-        
-        <div class="passo1">
-            <div class="img1"></div>
-        </div>
-
-        
-        <div class="passo2">
-            <div class="img2"></div>
-        </div>
-
-        
-        <div class="passo3">
-            <div class="img3"></div>
-        </div>
-
-        
-        <div class="passo4">
-            <div class="img4"></div>
-        </div>
-        
-
-        <div class="passo5">
-            <div class="img5"></div>
-        </div>
-
-        
-        <div class="passo6">
-            <div class="img6"></div>
-        </div>
-
-        
-        <div class="passo7">
-            <div class="img7"></div>
-        </div>
-    </div>
-
-
-    <!-- <div class=""></div> -->
 </body>
 </html>
-
 <script>
-
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
 </script>

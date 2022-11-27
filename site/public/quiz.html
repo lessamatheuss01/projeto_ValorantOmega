@@ -19,6 +19,12 @@
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
+            
+            <div class="btn-nav-white">
+                <a href="./perfil.html">
+                    <h3>Perfil</h3>
+                </a>
+            </div>
     
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
@@ -27,8 +33,8 @@
             </div>
 
             <div class="btn-nav-white">
-                <a href="./perfil.html">
-                    <h3>Perfil</h3>
+                <a href="./elo.html">
+                    <h3>Descubra seu elo</h3>
                 </a>
             </div>
         
@@ -44,24 +50,25 @@
                     de iniciantes
                 </h2>
                 <label>Em uma partida o heroísmo é esencial ?</label>
-                <input type="text" id="in_resposta1" placeholder="Sua resposta">
+                <input type="text" id="a0" placeholder="Sua resposta">
                 <label>Qual a diferença entre atacantes e defensores ?</label>
-                <input type="text" id="in_resposta2" placeholder="Sua resposta">
+                <input type="text" id="a1" placeholder="Sua resposta">
                 <label>Quais são os quatro passos é esencial no mapa ?</label>
-                <input type="text" id="in_resposta3" placeholder="Sua resposta">
+                <input type="text" id="a2" placeholder="Sua resposta">
                 <label>Quais funções essencial em batalha ?</label>
-                <input type="text" id="in_resposta4" placeholder="Sua resposta">
+                <input type="text" id="a3" placeholder="Sua resposta">
                 <label>Qual é o ciclo tatico após um tiroteio ?</label>
-                <input type="text" id="in_resposta5" placeholder="Sua resposta">
+                <input type="text" id="a4" placeholder="Sua resposta">
                 <br>
                 <br>
                 <button onclick="salvar()">Salvar</button>
-                <button onclick="verificar()">Verificar</button>
-                <div id="div_mensagem"></div>
+                <button style="display: none;" onclick="verificar()" id="verificar">Verificar</button>
+                <div id="div_mensagem" class="mensagem"></div>
             </div>
             
             <div class="resposta">
                 <h2>Respostas Certas do Quiz</h2>
+                <div id="div_certas" class="pergunta"></div>
             </div>
         </div>
 </body>
@@ -69,17 +76,34 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    var resultados = []
-
+    
+    
+    
     function salvar(){
-        var resposta1 = in_resposta1.value
-        var resposta2 = in_resposta2.value
-        var resposta3 = in_resposta3.value
-        var resposta4 = in_resposta4.value
-        var resposta5 = in_resposta5.value
+        var resultados = [document.getElementById('a0').value,
+        document.getElementById('a1').value,
+        document.getElementById('a2').value,
+        document.getElementById('a3').value,
+        document.getElementById('a4').value]
 
-        div_mensagem.innerHTML += `${resposta1}<br> ${resposta2}<br> ${resposta3}<br>
-        ${resposta4}<br> ${resposta5}`
+        for (index = 1; index < resultados.length; index++) {
+            if(resultados[index] == ""){
+                alert('Campos vazios')
+                break
+            }else{
+                div_mensagem.innerHTML = `Respostas Salvas:<br> 1° ${resultados[0]}<br> 2° ${resultados[1]} <br> 3° ${resultados[2]}<br> 4° ${resultados[3]}<br> 5° ${resultados[4]}`
+            }
+            document.getElementById('verificar').style.display ='block'
+        }
+    }
 
+    function verificar(){
+        var certas = [
+                 "Não, em uma poartida precisa de mecânica de tiro + habilidaes = um jogo tatico <br><br> Os atacantes vão fazer a função de atacar e plantar a spike e os defensores tem proteger seu bombe dos atacantes <br><br> Plantar ou desarme, adaptação em cada mapa, perpectivas agentes diferentes se saem melhor em mapas diferentes e por ultimo a logística <br><br> Ouvir os integrantes do time, parar para atirar com precisão e combar utilizar suas habilidades e armas essa combinação pode ser uma forma letal <br> execução, informações e planejamento"
+        ]
+        for (let i = 0; i < certas.length; i++) {
+            certas[i]
+            div_certas.innerHTML = `${certas}`
+        }
     }
 </script>
