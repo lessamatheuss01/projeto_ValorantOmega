@@ -49,10 +49,37 @@
     </div>
 
     <div class="caixa">
-        <h1>Você esta preparado pra entra no squad</h1>
+        <h1>Cadastre seu nick</h1>
+        <input type="text" placeholder="Nick" id="in_nick">
+        <input type="text" placeholder="Tag" id="in_tag">
+        <button onclick="registrar()">Registrar</button>
+        <!-- <button onclick="verificar()">Verificar</button> -->
+        <div id="div_mensagem"></div>
     </div>
 </body>
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var lista = []
+    function registrar(){
+        var nick = in_nick.value;
+        var tag = in_tag.value;
+
+        if(nick == "" || tag == ""){
+            alert('Inválido! Verifique o preenchimento dos campos e tente novamente!')
+        }else{
+            var registrado = {
+                nick: nick,
+                tag: tag,
+            }
+            lista.push(registrado)
+        }
+        alert('Registrado com sucesso')
+        div_mensagem.innerHTML = `Registrado: <br>${registrado.nick} <br> ${registrado.tag}`
+    }
+
+    function verificar() {
+    }
+
 </script>

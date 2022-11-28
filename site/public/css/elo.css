@@ -115,11 +115,28 @@ body{
 .caixa {
     margin-top: 45px;
     margin-left: 245px;
-    width: 37vw;
-    height: 80vh;
+    width: 35vw;
+    height: 55vh;
     background-color: #101823;
     border-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.caixa input{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    border-bottom: 2px solid #FE4553;
+    height: 5%;
+    width: 45%;
+    padding: 1px;
+    color: white;
+}
+
+.caixa h1{
+    color: #FE4553;
+    text-align: center;
+    font-size: 30px;
 }
