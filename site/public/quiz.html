@@ -50,15 +50,15 @@
                     de iniciantes
                 </h2>
                 <label>Em uma partida o heroísmo é esencial ?</label>
-                <input type="text" id="a0" placeholder="Sua resposta">
+                <input type="text" id="input_resposta0" placeholder="Sua resposta">
                 <label>Qual a diferença entre atacantes e defensores ?</label>
-                <input type="text" id="a1" placeholder="Sua resposta">
+                <input type="text" id="input_resposta1" placeholder="Sua resposta">
                 <label>Quais são os quatro passos é esencial no mapa ?</label>
-                <input type="text" id="a2" placeholder="Sua resposta">
+                <input type="text" id="input_resposta2" placeholder="Sua resposta">
                 <label>Quais funções essencial em batalha ?</label>
-                <input type="text" id="a3" placeholder="Sua resposta">
+                <input type="text" id="input_resposta3" placeholder="Sua resposta">
                 <label>Qual é o ciclo tatico após um tiroteio ?</label>
-                <input type="text" id="a4" placeholder="Sua resposta">
+                <input type="text" id="input_resposta4" placeholder="Sua resposta">
                 <br>
                 <br>
                 <button onclick="salvar()">Salvar</button>
@@ -75,35 +75,33 @@
 </html>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    
-    
     
     function salvar(){
-        var resultados = [document.getElementById('a0').value,
-        document.getElementById('a1').value,
-        document.getElementById('a2').value,
-        document.getElementById('a3').value,
-        document.getElementById('a4').value]
+        var resultadosVar = [document.getElementById('input_resposta0').value,
+        document.getElementById('input_resposta1').value,
+        document.getElementById('input_resposta2').value,
+        document.getElementById('input_resposta3').value,
+        document.getElementById('input_resposta4').value]
 
-        for (index = 1; index < resultados.length; index++) {
-            if(resultados[index] == ""){
-                alert('Campos vazios')
+        for (index = 1; index < resultadosVar.length; index++) {
+            if(resultadosVar[index] == ""){
+                alert('Campos estão vazios')
                 break
             }else{
-                div_mensagem.innerHTML = `Respostas Salvas:<br> 1° ${resultados[0]}<br> 2° ${resultados[1]} <br> 3° ${resultados[2]}<br> 4° ${resultados[3]}<br> 5° ${resultados[4]}`
+                div_mensagem.innerHTML = `Respostas Salvas:<br> 1° ${resultadosVar[0]}<br> 2° ${resultadosVar[1]} <br> 3° ${resultadosVar[2]}<br> 4° ${resultadosVar[3]}<br> 5° ${resultadosVar[4]}`
             }
             document.getElementById('verificar').style.display ='block'
         }
-    }
+    } 
+
 
     function verificar(){
         var certas = [
-                 "Não, em uma poartida precisa de mecânica de tiro + habilidaes = um jogo tatico <br><br> Os atacantes vão fazer a função de atacar e plantar a spike e os defensores tem proteger seu bombe dos atacantes <br><br> Plantar ou desarme, adaptação em cada mapa, perpectivas agentes diferentes se saem melhor em mapas diferentes e por ultimo a logística <br><br> Ouvir os integrantes do time, parar para atirar com precisão e combar utilizar suas habilidades e armas essa combinação pode ser uma forma letal <br> execução, informações e planejamento"
+            "Não, em uma poartida precisa de mecânica de tiro + habilidaes = um jogo tatico <br><br> Os atacantes vão fazer a função de atacar e plantar a spike e os defensores tem proteger seu bombe dos atacantes <br><br> Plantar ou desarme, adaptação em cada mapa, perpectivas agentes diferentes se saem melhor em mapas diferentes e por ultimo a logística <br><br> Ouvir os integrantes do time, parar para atirar com precisão e combar utilizar suas habilidades e armas essa combinação pode ser uma forma letal <br> execução, informações e planejamento"
         ]
         for (let i = 0; i < certas.length; i++) {
             certas[i]
             div_certas.innerHTML = `${certas}`
         }
     }
-</script>
+</script>3

@@ -104,3 +104,22 @@ body{
     background-color: transparent;
     background-repeat: no-repeat;
 }
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.caixa {
+    margin-top: 45px;
+    margin-left: 245px;
+    width: 37vw;
+    height: 80vh;
+    background-color: #101823;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
