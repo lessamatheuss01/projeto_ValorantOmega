@@ -52,16 +52,23 @@
                 
             </div>
         </div>
+
+        <div class="caixa">
+            <h1>Cadastre seu nick</h1>
+            <input type="text" placeholder="Nick: Teseu" id="in_nick">
+            <input type="text" placeholder="Tag: #BR" id="in_tag">
+            <button onclick="registrar()">Registrar</button>
+            <div id="div_mensagem" class="mensagem"></div>
+        </div>
+        
+        <div class="resposta">
+            <h2>Sorteio de Elo</h2>
+            <button onclick="sorteio()" style="display: none;" id="sorteio">sorteio</button>
+            <div id="div_sorteio" class="sorteio"></div>
+        </div>
     </div>
 
-    <div class="caixa">
-        <h1>Cadastre seu nick</h1>
-        <input type="text" placeholder="Nick" id="in_nick">
-        <input type="text" placeholder="Tag" id="in_tag">
-        <button onclick="registrar()">Registrar</button>
-        <!-- <button onclick="verificar()">Verificar</button> -->
-        <div id="div_mensagem"></div>
-    </div>
+
 </body>
 </html>
 <script>
@@ -82,10 +89,72 @@
             lista.push(registrado)
         }
         alert('Registrado com sucesso')
-        div_mensagem.innerHTML = `Registrado: <br>${registrado.nick} <br> ${registrado.tag}`
+        div_mensagem.innerHTML = `Registrado:<br>
+        Nick: ${registrado.nick} <br>  Tag: ${registrado.tag}`
+        document.getElementById('sorteio').style.display ='block'
     }
 
-    function verificar() {
+    function sorteio() {
+        var sorteio = parseInt(1 + Math.random() * 25)
+        if(sorteio == 1){
+            div_sorteio.innerHTML = `<img src="./assets/Ferro1.png" width="150px"> <br>`
+        }else if(sorteio == 2){
+            div_sorteio.innerHTML = `<img src="./assets/Ferro2.png" width="150px"<br>`
+        }else if(sorteio == 3){
+            div_sorteio.innerHTML = `<img src="./assets/Ferro3.png" width="150px"<br>`
+        }else if(sorteio == 4){
+            div_sorteio.innerHTML = `<img src="./assets/Bronze1.png" width="150px"<br>`
+        }else if(sorteio == 5){
+            div_sorteio.innerHTML = `<img src="./assets/Bronze2.png" width="150px"<br>`
+        }else if(sorteio == 6){
+            div_sorteio.innerHTML = `<img src="./assets/Bronze3.png" width="150px"<br>`
+        }else if(sorteio == 7){
+            div_sorteio.innerHTML = `<img src="./assets/Prata1.png" width="150px"<br>`
+        }else if(sorteio == 8){
+            div_sorteio.innerHTML = `<img src="./assets/Prata2.png" width="150px"<br>`
+        }else if(sorteio == 9){
+            div_sorteio.innerHTML = `<img src="./assets/Prata3.png" width="150px"<br>`
+        }else if(sorteio == 10){
+            div_sorteio.innerHTML = `<img src="./assets/Ouro1.png" width="150px"<br>`
+        }else if(sorteio == 10){
+            div_sorteio.innerHTML = `<img src="./assets/Ouro2.png" width="150px"<br>`
+        }else if(sorteio == 11){
+            div_sorteio.innerHTML = `<img src="./assets/Ouro3.png" width="150px"<br>`
+        }else if(sorteio == 12){
+            div_sorteio.innerHTML = `<img src="./assets/Platina1.png" width="150px"<br>`
+        }else if(sorteio == 13){
+            div_sorteio.innerHTML = `<img src="./assets/Platina2.png" width="150px"<br>`
+        }else if(sorteio == 14){
+            div_sorteio.innerHTML = `<img src="./assets/Platina3.png" width="150px"<br>`
+        }else if(sorteio == 15){
+            div_sorteio.innerHTML = `<img src="./assets/Diamante1.png" width="150px"<br>`
+        }else if(sorteio == 16){
+            div_sorteio.innerHTML = `<img src="./assets/Diamante2.png" width="150px"<br>`
+        }else if(sorteio == 17){
+            div_sorteio.innerHTML = `<img src="./assets/Diamante3.png" width="150px"<br>`
+        }else if(sorteio == 18){
+            div_sorteio.innerHTML = `<img src="./assets/ascendente1.png" width="150px"<br>`
+        }else if(sorteio == 19){
+            div_sorteio.innerHTML = `<img src="./assets/ascendente2.png" width="150px"<br>`
+        }else if(sorteio == 20){
+            div_sorteio.innerHTML = `<img src="./assets/ascendente3.png" width="150px"<br>`
+        }else if(sorteio == 21){
+            div_sorteio.innerHTML = `<img src="./assets/Immortal1.png" width="150px"<br>`
+        }else if(sorteio == 22){
+            div_sorteio.innerHTML = `<img src="./assets/Immortal2.png" width="150px"<br>`
+        }else if(sorteio == 23){
+            div_sorteio.innerHTML = `<img src="./assets/Imortal3.png" width="150px"<br>`
+        }else if(sorteio == 24){
+            div_sorteio.innerHTML = `<img src="./assets/Radiante1.png" width="150px"<br>`
+        }
+
+        if(sorteio < 12){
+            div_sorteio.innerHTML += 'Agente você não esta preparado pra batalha<br>'
+        }else if(sorteio <= 13){
+            div_sorteio.innerHTML += 'Agente você esta no caminho certo, lute mais<br>'
+        }else{
+            div_sorteio.innerHTML += 'Parabéns!! agente você foi confocado pro squad do Brimstone'
+        }
     }
 
 </script>

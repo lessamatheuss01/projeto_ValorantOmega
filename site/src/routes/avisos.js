@@ -7,9 +7,9 @@ router.get("/publicar", function (req, res) {
     avisoController.testar(req, res);
 });
 
-router.get("/deletar", function (req, res) {
-    avisoController.testar(req, res);
-});
+// router.get("/deletar", function (req, res) {
+//     avisoController.testar(req, res);
+// });
 
 router.get("/listar", function (req, res) {
     avisoController.listar(req, res);

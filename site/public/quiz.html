@@ -56,15 +56,37 @@
                     de iniciantes
                 </h2>
                 <label>Em uma partida o heroísmo é esencial ?</label>
-                <input type="text" id="input_resposta0" placeholder="Sua resposta">
+                <select id="resposta0">
+                    <option value="">--Responda--</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
                 <label>Qual a diferença entre atacantes e defensores ?</label>
-                <input type="text" id="input_resposta1" placeholder="Sua resposta">
+                <select id="resposta1">
+                    <option value="">--Responda--</option>
+                    <option value="Atacantes defende sua base e Defensores ataca">Atacantes defende sua base e Defensores ataca</option>
+                    <option value="Desenfores defendem sua base dos atacantes e os atacantes ataca os inimigos">Desenfores defendem sua base dos atacantes e os atacantes ataca os inimigos</option>
+                </select>
                 <label>Quais são os quatro passos é esencial no mapa ?</label>
-                <input type="text" id="input_resposta2" placeholder="Sua resposta">
+                <select id="resposta2">
+                    <option value="">--Responda--</option>
+                    <option value="Plantar/Adaptação/Perspectivas/Logística">Plantar/Adaptação/Perspectivas/Logística</option>
+                    <option value="Atacar/Atirar/Poder">Atacar/Atirar/Poder</option>
+                </select>
                 <label>Quais funções essencial em batalha ?</label>
-                <input type="text" id="input_resposta3" placeholder="Sua resposta">
+                    <select id="resposta3">
+                        <option value="">--Responda--</option>
+                        <option value="Ouvir o time, parar e atirar, combar o inimigo">Ouvir o time, parar e atirar, combar o inimigo</option>
+                        <option value="Atirar, não escutar, sair atirando em tudo">Atirar, não escutar, sair atirando em tudo</option>
+                        <option value="Duelista">Duelista</option>
+                    </select>
                 <label>Qual é o ciclo tatico após um tiroteio ?</label>
-                <input type="text" id="input_resposta4" placeholder="Sua resposta">
+                <select id="resposta4">
+                    <option value="">--Responda--</option>
+                    <option value="Atirar/Usar o poder/Não escutar">Atirar/Usar o poder/Não escutar</option>
+                    <option value="Execução/Informações/Planejamento">Execução/Informações/Planejamento</option>
+                </select>
+                
                 <br>
                 <br>
                 <button onclick="salvar()">Salvar</button>
@@ -83,11 +105,11 @@
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
     function salvar(){
-        var resultadosVar = [document.getElementById('input_resposta0').value,
-        document.getElementById('input_resposta1').value,
-        document.getElementById('input_resposta2').value,
-        document.getElementById('input_resposta3').value,
-        document.getElementById('input_resposta4').value]
+        var resultadosVar = [document.getElementById('resposta0').value,
+        document.getElementById('resposta1').value,
+        document.getElementById('resposta2').value,
+        document.getElementById('resposta3').value,
+        document.getElementById('resposta4').value]
 
         for (index = 1; index < resultadosVar.length; index++) {
             if(resultadosVar[index] == ""){
@@ -103,11 +125,11 @@
 
     function verificar(){
         var certas = [
-            "Não, em uma poartida precisa de mecânica de tiro + habilidaes = um jogo tatico <br><br> Os atacantes vão fazer a função de atacar e plantar a spike e os defensores tem proteger seu bombe dos atacantes <br><br> Plantar ou desarme, adaptação em cada mapa, perpectivas agentes diferentes se saem melhor em mapas diferentes e por ultimo a logística <br><br> Ouvir os integrantes do time, parar para atirar com precisão e combar utilizar suas habilidades e armas essa combinação pode ser uma forma letal <br> execução, informações e planejamento"
+            "1°: SIM <br> 2°: Desenfores defendem sua base dos atacantes e os atacantes ataca os inimigos <br> 3°:Plantar/Adaptação/Perspectivas/Logística <br> 4°:Ouvir o time, parar e atirar, combar o inimigo <br> 5°: Execução/Informações/Planejamento "
         ]
         for (let i = 0; i < certas.length; i++) {
             certas[i]
             div_certas.innerHTML = `${certas}`
         }
     }
-</script>3
+</script>

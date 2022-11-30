@@ -125,7 +125,8 @@ from agente_funcao
 join agente on idagente = fkagente
     join funcao on idfuncao = fkfuncao;
 
-select agente.nomeAgente as agente, COUNT(fkagente) as qtd from usuario join agente on fkagente = idagente group by fkagente order by fkagente desc limit 10;
+select agente.nomeAgente as agente, COUNT(fkagente) as qtd from usuario join agente on fkagente = idagente group by fkagente 
+rder by fkagente desc limit 10;
     
 
 CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
