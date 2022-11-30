@@ -2,69 +2,84 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="icon" type="imagem/png" href="./assets/logo-valorantomega.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Avisos</title>
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./dashboards.css">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="./css/mural.css">
     <script src="../js/funcoes.js"></script>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
     <!-- <body onload="validarSessao()"> -->
 
-    <div class="janela">
+        <div class="janela">
+            <div class="header-left">
+    
+                <img src="./assets/perfil01.png" class="userimg">
+    
+                <div class="hello">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
+                
+                <div class="btn-nav-white">
+                    <a href="./perfil.html">
+                        <h3>Perfil</h3>
+                    </a>
+                </div>
 
-
-        <div class="header-left">
-
-            <h1>AquaTech</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <div class="btn-nav-white">
+                    <a href="./quiz.html">
+                        <h3>Quiz</h3>
+                    </a>
+                </div>
+                
+                <div class="btn-nav-white">
+                    <a href="./dashboard.html">
+                        <h3>Grafico</h3>
+                    </a>
+                </div>
+    
+                <div class="btn-nav-white">
+                    <a href="./elo.html">
+                        <h3>Sorteio</h3>
+                    </a>
+                </div>
+            
+                <button onclick="baixar()"><a href="https://playvalorant.com/pt-br/" target="_blank" rel="noopener noreferrer">Baixar</a></button>
+    
+                <div class="btn-logout" onclick="limparSessao()">
+                    <img src="./assets/sair.png" class="logout">
+                    
+                </div>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
         </div>
 
         <div class="dash-right">
 
             <div class="avisos">
                 <div class="container">
-                    <h1>Publicar um aviso</h1>
+                    <h1>Publicar uma avaliação</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
-                                Título:
+                                Avaliação:
                                 <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
+                                <select name="titulo" id="titulo" maxlenght="100">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    
+                                </select>
+                                <!-- <input name="titulo" id="titulo" maxlength="100" type="text"> -->
                             </label>
                             <br>
                             <label>
@@ -76,7 +91,7 @@
                             <button>Enviar</button>
                         </form>
                     </div>
-                    <h1>Mural de Avisos</h1>
+                    <h1>Mural de Avaliações</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
@@ -139,9 +154,9 @@
 
             if (resposta.ok) {
                 window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html";
+                window.location = "mural.html";
                 limparFormulario();
-                finalizarAguardar();
+                // finalizarAguardar();
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -149,7 +164,7 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;
@@ -166,7 +181,7 @@
 
     function deletar(idAviso) {
         console.log("Criar função de apagar post escolhido - ID" + idAviso);
-        fetch(`/avisos/deletar/${idAviso}`, {
+        fetch(`/avisos/deletar/ ${idAviso}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -175,7 +190,7 @@
 
             if (resposta.ok) {
                 window.alert("Post deletado com sucesso pelo usuario de email: " + sessionStorage.getItem("EMAIL_USUARIO") + "!");
-                window.location = "/dashboard/mural.html"
+                window.location = "mural.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -218,10 +233,10 @@
 
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        spanTitulo.innerHTML = "Nota: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
                         divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
-                        btnEditar.innerHTML = "Editar";
+                        // btnEditar.innerHTML = "Editar";
                         btnDeletar.innerHTML = "Deletar";
 
                         divPublicacao.className = "publicacao";
@@ -245,24 +260,24 @@
                         divPublicacao.appendChild(spanTitulo);
                         divPublicacao.appendChild(divDescricao);
                         divPublicacao.appendChild(divButtons);
-                        divButtons.appendChild(btnEditar);
+                        // divButtons.appendChild(btnEditar);
                         divButtons.appendChild(btnDeletar);
                         feed.appendChild(divPublicacao);
                     }
 
-                    finalizarAguardar();
+                    // finalizarAguardar();
                 });
             } else {
                 throw ('Houve um erro na API!');
             }
         }).catch(function (resposta) {
             console.error(resposta);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
     }
 
     function testar() {
-        aguardar();
+        // aguardar();
 
         var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
 
@@ -271,7 +286,7 @@
         divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
         divResultado.innerHTML = formulario.get("descricao");
 
-        finalizarAguardar();
+        // finalizarAguardar();
 
         return false;
     }

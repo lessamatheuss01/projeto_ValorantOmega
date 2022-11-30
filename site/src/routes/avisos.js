@@ -3,7 +3,11 @@ var router = express.Router();
 
 var avisoController = require("../controllers/avisoController");
 
-router.get("/", function (req, res) {
+router.get("/publicar", function (req, res) {
+    avisoController.testar(req, res);
+});
+
+router.get("/deletar", function (req, res) {
     avisoController.testar(req, res);
 });
 

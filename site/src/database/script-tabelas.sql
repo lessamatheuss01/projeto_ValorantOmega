@@ -22,32 +22,29 @@ foreign key (fkagente) references agente(idagente)
 
 create table agente (
 idagente int primary key auto_increment,
-nomeAgente varchar(45),
-fkfuncao int,
-foreign key (fkfuncao) references funcao(idfuncao)
+nomeAgente varchar(45)
 );
-
 insert into agente values
-	(1, 'Brimstone', 20),
-    (2, 'Phoenix', 21),
-    (3, 'Sage', 22),
-    (4, 'Sova', 23),
-    (5, 'Viper', 24),
-    (6, 'Cypher', 25),
-    (7, 'Reyna', 26),
-    (8, 'Killjoy', 27),
-    (9, 'Breach', 28),
-    (10, 'Omen', 29),
-    (11, 'Jett', 30),
-    (12, 'Raze', 31),
-    (13, 'Skye', 32),
-    (14, 'Yoru', 33),
-    (15, 'Astra', 34),
-    (16, 'Kay/o', 35),
-    (17, 'Chamber', 36),
-    (18, 'Neon', 37),
-    (19, 'Fade', 38),
-    (20, 'Harbor', 39);
+	(1, 'Brimstone'),
+    (2, 'Phoenix'),
+    (3, 'Sage'),
+    (4, 'Sova'),
+    (5, 'Viper'),
+    (6, 'Cypher'),
+    (7, 'Reyna'),
+    (8, 'Killjoy'),
+    (9, 'Breach'),
+    (10, 'Omen'),
+    (11, 'Jett'),
+    (12, 'Raze'),
+    (13, 'Skye'),
+    (14, 'Yoru'),
+    (15, 'Astra'),
+    (16, 'Kay/o'),
+    (17, 'Chamber'),
+    (18, 'Neon'),
+    (19, 'Fade'),
+    (20, 'Harbor');
     
     
 create table funcao(
@@ -76,12 +73,59 @@ insert into funcao values
     (37, 'Duelista'),
     (38, 'Iniciadora'),
     (39, 'Controlador');
+
+create table agente_funcao(
+idagente_funcao int primary key auto_increment,
+fkagente int,
+foreign key (fkagente) references agente(idagente),
+fkfuncao int,
+foreign key (fkfuncao) references funcao(idfuncao)
+);
+
+insert into agente_funcao values
+	(40, 1, 20),
+    (41, 2, 21),
+    (42, 3, 22),
+    (43, 4, 23),
+    (44, 5, 24),
+    (45, 6, 25),
+    (46, 7, 26),
+    (47, 8, 27),
+    (48, 9, 28),
+    (49, 10, 29),
+    (51, 11, 30),
+    (52, 12, 31),
+    (53, 13, 32),
+    (54, 14, 33),
+    (55, 15, 34),
+    (56, 16, 35),
+    (57, 17, 36),
+    (58, 18, 37),
+    (59, 19, 38),
+    (60, 20, 39);
     
+    
+create table aviso (
+idaviso int primary key auto_increment,
+titulo varchar(100),
+descricao varchar(150),
+fkusuario int,
+foreign key (fkusuario) references usuario(idusuario)
+);
+   
 select * from usuario;
 select * from agente;
 select * from funcao;
+select * from agente_funcao;
+select * from aviso;
 
-select agente.nomeAgente as agente, COUNT(fkagente) as qtd from usuario join agente on fkagente = idagente group by fkagente order by fkagente desc limit 3;
+select agente.nomeAgente as Nome_Agente,
+funcao.funcao as Funcao
+from agente_funcao 
+join agente on idagente = fkagente
+    join funcao on idfuncao = fkfuncao;
+
+select agente.nomeAgente as agente, COUNT(fkagente) as qtd from usuario join agente on fkagente = idagente group by fkagente order by fkagente desc limit 10;
     
 
 CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
