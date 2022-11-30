@@ -111,7 +111,7 @@ body{
     width: 450px;
     height: 350px;
     margin-left: 340px;
-    margin-bottom: -250px;
+    margin-bottom: -400px;
     margin-block-start: -8%;
 }
 
@@ -132,7 +132,7 @@ body{
     display: flex;
     align-items: center; 
     flex-direction: row;
-    margin-top: 150px;
+    margin-top: 250px;
     margin-left: 310px;
     font-size: 20px;
 }
